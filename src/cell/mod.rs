@@ -8,7 +8,7 @@ use crate::util::Bitstring;
 
 pub use self::builder::{CellBuilder, CellRefsBuilder, Store};
 pub use self::cell_context::{CellContext, CellParts, LoadMode};
-pub use self::cell_impl::{StaticCell, VirtualCellWrapper};
+pub use self::cell_impl::{StaticCell, VirtualCellWrapper, make_cell};
 pub use self::slice::{CellSlice, CellSliceParts, CellSliceRange, CellSliceSize, ExactSize, Load};
 pub use self::usage_tree::{UsageTree, UsageTreeMode, UsageTreeWithSubtrees};
 
