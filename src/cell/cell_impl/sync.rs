@@ -168,7 +168,7 @@ impl CellContext for EmptyCellContext {
     }
 }
 
-unsafe fn make_cell(ctx: CellParts, hashes: Vec<(HashBytes, u16)>) -> Cell {
+pub unsafe fn make_cell(ctx: CellParts, hashes: Vec<(HashBytes, u16)>) -> Cell {
     match ctx.descriptor.cell_type() {
         CellType::PrunedBranch => {
             debug_assert!(hashes.len() == 1);
