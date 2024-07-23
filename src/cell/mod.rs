@@ -8,15 +8,15 @@ use crate::util::Bitstring;
 
 pub use self::builder::{CellBuilder, CellRefsBuilder, Store};
 pub use self::cell_context::{CellContext, CellParts, LoadMode};
-pub use self::cell_impl::{StaticCell, VirtualCellWrapper, make_cell};
+pub use self::cell_impl::{StaticCell, VirtualCellWrapper};
 pub use self::slice::{CellSlice, CellSliceParts, CellSliceRange, CellSliceSize, ExactSize, Load};
 pub use self::usage_tree::{UsageTree, UsageTreeMode, UsageTreeWithSubtrees};
 
 #[cfg(not(feature = "sync"))]
-pub use self::cell_impl::rc::{Cell, CellInner};
+pub use self::cell_impl::rc::{Cell, CellInner, make_cell};
 
 #[cfg(feature = "sync")]
-pub use self::cell_impl::sync::{Cell, CellInner};
+pub use self::cell_impl::sync::{Cell, CellInner, make_cell};
 
 pub use everscale_types_proc::{Load, Store};
 
